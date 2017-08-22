@@ -17,7 +17,7 @@ yum install -y epel-release
 ## 安装常见工具
 
 ```
-yum install -y tmux vim dstat lsof htop
+yum install -y tmux vim dstat lsof htop tree jq rsync
 ```
 
 - [Docker](../docker)

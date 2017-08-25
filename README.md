@@ -9,6 +9,10 @@
 
 - [Elasticsearch](./services/elasticsearch.md)
 
+## 招聘
+
+- [OOCLAB寻找靠谱的前端小伙伴(远程)](./jobs/frontend.md)
+
 ## TODO
 
 - 写一个github协作流程

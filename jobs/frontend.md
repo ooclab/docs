@@ -32,5 +32,6 @@ OOCLAB 以 Linux, 自由/开源软件为基础，为企业提供IT解决方案�
 补充说明：
 
 - 上面未提到的技术点，只要你有信心，欢迎讨论
+- 最新信息地址: https://github.com/ooclab/docs/blob/master/jobs/frontend.md
 
 如果你有了点兴趣，欢迎进一步沟通 ( 微信 lijian_gnu ; 邮件 lijian.gnu@gmail.com )

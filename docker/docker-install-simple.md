@@ -50,4 +50,7 @@ sudo systemctl restart docker
 
 ## 参考
 
-[Docker 中国官方镜像加速](https://www.docker-cn.com/registry-mirror)
+加速器：
+
+- [https://www.daocloud.io/mirror](https://www.daocloud.io/mirror) 比较靠谱
+- [Docker 中国官方镜像加速](https://www.docker-cn.com/registry-mirror) 很不靠谱

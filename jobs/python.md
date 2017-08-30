@@ -32,7 +32,7 @@ OOCLAB 以 Linux, 自由/开源软件为基础，为企业提供IT解决方案�
 
 补充说明：
 
-- **熟悉** 表示 Python 开发方便擅长
+- **熟悉** 表示 Python 开发方面比较擅长
 - 上面未提到的技术点，只要你有信心，欢迎讨论
 - 最新信息地址: https://github.com/ooclab/docs/blob/master/jobs/python.md
 

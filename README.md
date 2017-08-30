@@ -12,6 +12,7 @@
 ## 招聘
 
 - [OOCLAB寻找靠谱的前端小伙伴(远程)](./jobs/frontend.md)
+- [OOCLAB寻找靠谱的 Python 小伙伴(远程)](./jobs/python.md)
 
 ## TODO
 

@@ -37,3 +37,11 @@ OOCLAB 以 Linux, 自由/开源软件为基础，为企业提供IT解决方案�
 - 最新信息地址: https://github.com/ooclab/docs/blob/master/jobs/python.md
 
 如果你有了点兴趣，欢迎进一步沟通 ( 微信 lijian_gnu ; 邮件 lijian.gnu@gmail.com )
+
+## 更新历史
+
+### 2017年9月7日
+
+感谢关注！
+暂时有小伙伴在处理，其他还有项目没确定，确定后才能明确需要的小伙伴，
+仍然欢迎联系我们(加我们的微信群)，谢谢！

@@ -11,6 +11,12 @@
 
 ## 招聘
 
+### 进行中
+
+- [寻找Linux发行版研发小伙伴](./jobs/linux-distribution-dev.md)
+
+### OLD
+
 - [OOCLAB寻找靠谱的前端小伙伴(远程)](./jobs/frontend.md)
 - [OOCLAB寻找靠谱的 Python 小伙伴(远程)](./jobs/python.md)
 

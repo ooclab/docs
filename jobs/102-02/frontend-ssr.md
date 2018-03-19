@@ -1,4 +1,4 @@
-# [OOCLAB] MVC(SSR) 前端项目开发
+# 【OOCLAB】MVC(SSR) 前端项目开发
 
 最新地址: https://github.com/ooclab/docs/blob/master/jobs/102-02/frontend-ssr.md
 

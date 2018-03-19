@@ -4,7 +4,7 @@
 
 OOCLAB 以 GNU/Linux, 自由/开源软件为基础，提供技术顾问、软件开发服务。
 
-目前在实践众包协作模式，可以通过社区项目 RemoteX (https://github.com/ooclab/remotex) 进一步了解我们。
+目前在实践众包协作模式，可以通过社区项目 [RemoteX](https://github.com/ooclab/remotex) 进一步了解我们。
 
 ## 关于项目
 

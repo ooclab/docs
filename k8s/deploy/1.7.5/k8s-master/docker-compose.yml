@@ -1,0 +1,58 @@
+version: '3'
+services:
+
+    etcd:
+        image: quay.io/coreos/etcd:v3.2
+        network_mode: host
+        volumes:
+            - "/data/product/k8s-master/etcd-data:/etcd-data"
+        entrypoint: |
+            /usr/local/bin/etcd
+            --data-dir=/etcd-data
+            --name node1
+            --initial-advertise-peer-urls http://10.0.0.7:2380
+            --listen-peer-urls http://10.0.0.7:2380
+            --advertise-client-urls http://10.0.0.7:2379
+            --listen-client-urls http://10.0.0.7:2379
+            --initial-cluster node1=http://10.0.0.7:2380
+
+    apiserver:
+        image: omio/gcr.io.google_containers.kube-apiserver:v1.7.5
+        network_mode: host
+        volumes:
+            - "/data/product/k8s-master/certs:/certs"
+        entrypoint: |
+            kube-apiserver
+            --bind-address=0.0.0.0
+            --secure-port=443
+            --etcd-servers=http://10.0.0.7:2379
+            --service-cluster-ip-range=10.254.0.0/16
+            --allow-privileged
+            --advertise-address 10.0.0.7
+            --admission-control=NamespaceLifecycle,LimitRanger,ServiceAccount,ResourceQuota
+            --tls-cert-file /certs/apiserver.crt
+            --tls-private-key-file /certs/apiserver.key
+            --client-ca-file /certs/ca.crt
+            --service-account-key-file /certs/apiserver.key
+
+    scheduler:
+        image: omio/gcr.io.google_containers.kube-scheduler:v1.7.5
+        network_mode: host
+        volumes:
+            - /data/product/k8s-master/certs:/certs:ro
+            - /data/product/k8s-master/config:/config:ro
+        entrypoint: |
+            kube-scheduler
+            --kubeconfig /config/kubeconfig
+
+    controller-manager:
+        image: omio/gcr.io.google_containers.kube-controller-manager:v1.7.5
+        network_mode: host
+        volumes:
+            - /data/product/k8s-master/certs:/certs:ro
+            - /data/product/k8s-master/config:/config:ro
+        entrypoint: |
+            kube-controller-manager
+            --kubeconfig /config/kubeconfig
+            --service-account-private-key-file /certs/apiserver.key
+            --root-ca-file /certs/ca.crt

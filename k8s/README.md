@@ -7,4 +7,5 @@
 
 ## 使用
 
+- [创建certs](./create-certs.md)
 - [k8s issues](./issues/README.md)

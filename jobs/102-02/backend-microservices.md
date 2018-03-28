@@ -44,3 +44,9 @@ OOCLAB 以 Linux、自由/开源软件为基础，为企业提供技术顾问和
 
 关于众包/远程协作，
 可以通过 RemoteX (https://github.com/ooclab/remotex) 进一步了解。
+
+## Changelog
+
+### 2018年3月28日
+
+当前后端人员已经齐备，欢迎大家加入 RemoteX 群交流。

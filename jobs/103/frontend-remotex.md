@@ -1,6 +1,6 @@
 # REMOTEX 前端项目开发
 
-链接地址 https://github.com/ooclab/docs/blob/master/jobs/102-02/frontend-remotex.md 「REMOTEX 前端项目开发」
+链接地址 https://github.com/ooclab/docs/blob/master/jobs/103/frontend-remotex.md 「REMOTEX 前端项目开发」
 
 ## 需求描述
 

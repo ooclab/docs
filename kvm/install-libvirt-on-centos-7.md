@@ -170,6 +170,12 @@ virsh console ooclab-dev
 ssh -v centos@192.168.122.XXX
 ```
 
+获取 IP 另外一个方式：
+
+```
+virsh qemu-agent-command ooclab-dev '{"execute":"guest-network-get-interfaces"}' | jq
+```
+
 ## FAQ
 
 ### `failed to initialize KVM: Permission denied`

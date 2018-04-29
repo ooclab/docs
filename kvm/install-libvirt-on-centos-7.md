@@ -57,23 +57,29 @@ qemu-img create -b CentOS-7-x86_64-GenericCloud-1802.qcow2 -f qcow2 ooclab-dev.q
 ```
 #cloud-config
 
-# 系统初始化完成删除 cloud-init 包
 runcmd:
   - [ yum, -y, remove, cloud-init ]
 
-# 保存初始化日志
 output:
   all: ">> /var/log/cloud-init.log"
+
+# 用户
+users:
+  - name: root
+    # add ssh public keys
+    ssh_authorized_keys:
+    - ssh-rsa AAAAB3NzaC1yc2E...QfC4n03w== root@ooclab-t10
+    - ssh-rsa AAAAB3NzaC...6IZQ== gwind@mbp
+
+chpasswd:
+  list: |
+    root:ooclab
+  expire: False
 
 # configure interaction with ssh server
 ssh_svcname: ssh
 ssh_deletekeys: True
 ssh_genkeytypes: ['rsa', 'ecdsa']
-
-# 配置默认用户(centos)的ssh公钥，可以一次指定多个
-ssh_authorized_keys:
-  - ssh-rsa AAAAB3NzaC1y...QfC4n03w== root@ooclab-t10
-  - ssh-rsa AAAAB3NzaC1y...BJF6IZQ== gwind@mbp
 ```
 
 创建 `meta-data` :
@@ -85,7 +91,7 @@ local-hostname: node01
 创建 `config.iso` :
 
 ```
-genisoimage -output config.iso -volid cidata -joliet -rock user-data meta-data
+genisoimage -jcharset utf-8 -output config.iso -volid cidata -joliet -rock user-data meta-data
 ```
 
 ### 创建 `ooclab-dev.xml`
@@ -169,6 +175,34 @@ virsh console ooclab-dev
 ```
 ssh -v centos@192.168.122.XXX
 ```
+
+## Tips
+
+### 创建 base 映像
+
+如果需要将当前工作保存为一个 base image , 需要做些简单清理：
+
+```
+unalias rm
+sed -i '/HWADDR/d' /etc/sysconfig/network-scripts/ifcfg-eth0
+ln -sf /usr/share/zoneinfo/Asia/Shanghai /etc/localtime
+rm /etc/udev/rules.d/70*
+rm ~/.bash_history
+```
+
+### 查看虚拟机 IP
+
+#### 方法一
+
+```
+# virsh net-dhcp-leases default
+ Expiry Time          MAC 地址         Protocol  IP address                Hostname        Client ID or DUID
+-------------------------------------------------------------------------------------------------------------------
+ 2018-04-28 21:52:08  ac:de:92:01:00:01  ipv4      192.168.122.232/24        -               -
+ 2018-04-28 21:44:31  ac:de:92:01:00:03  ipv4      192.168.122.234/24        -               -
+```
+
+#### 方法二
 
 获取 IP 另外一个方式：
 

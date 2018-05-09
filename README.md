@@ -12,10 +12,4 @@
 
 ## 招聘
 
-### 进行中
-
-- [寻找Kubernetes技术支持小伙伴 (远程兼职)](./jobs/k8s-support.md)
-
-## TODO
-
-- 写一个github协作流程
+[众包需求](https://github.com/ooclab/remotex/blob/master/zb/index.md)

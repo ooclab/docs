@@ -5,7 +5,7 @@
 ## 需求描述
 
 - 时间：2周
-- 费用：1000RMB
+- 费用：5000RMB
 
 已有原型，该部分前端（PC Web端）需要与后端 API 接口对接。后端是微服务架构，提供 SwaggerUI API接口文档。
 
@@ -43,4 +43,3 @@ OOCLAB 以 Linux、自由/开源软件为基础，为企业提供技术顾问和
 关于众包/远程协作，
 可以通过 RemoteX (https://github.com/ooclab/remotex) 进一步了解。
 
-## Changelog

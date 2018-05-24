@@ -95,6 +95,10 @@ local-hostname: node01
 genisoimage -jcharset utf-8 -output config.iso -volid cidata -joliet -rock user-data meta-data
 ```
 
+**注意** :
+
+1. user-data 文件第一行必须是 `#cloud-config` ，一个其他字符不可以有（含空格）.
+
 ### 创建 `ooclab-dev.xml`
 
 ```xml

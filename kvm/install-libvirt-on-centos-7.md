@@ -47,6 +47,8 @@ cd /data/vos/centos/
 
 ### 创建系统盘 `ooclab-dev.qcow2`
 
+**ooclab-dev** :待创建的系统的标识,可根据实际场景修改。下面出现ooclab-dev一样，建议保持一致。
+
 ```
 qemu-img create -b CentOS-7-x86_64-GenericCloud-1802.qcow2 -f qcow2 ooclab-dev.qcow2
 ```
@@ -82,6 +84,9 @@ ssh_svcname: ssh
 ssh_deletekeys: True
 ssh_genkeytypes: ['rsa', 'ecdsa']
 ```
+备注：
+**ssh_authorized_keys** :登录用户的ssh public key.
+**root:ooclab** ：登录的用户名和密码
 
 创建 `meta-data` :
 
@@ -162,6 +167,12 @@ genisoimage -jcharset utf-8 -output config.iso -volid cidata -joliet -rock user-
   </devices>
 </domain>
 ```
+
+备注：
+  ```<source file="/data/vos/centos/ooclab-dev.qcow2"/>``` ：修改为对应的qcow2文件的地址
+  ```<source file='/data/vos/centos/config.iso'/>``` ：修改为对应iso文件的地址
+
+
 
 ### 创建虚拟机
 

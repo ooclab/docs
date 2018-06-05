@@ -20,6 +20,12 @@ wget https://cloud.centos.org/centos/7/images/CentOS-7-x86_64-GenericCloud-1802.
 yum install -y libvirt kvm qemu-kvm
 ```
 
+如果需要 genisoimage , 请安装：
+
+```
+yum install -y genisoimage
+```
+
 ## 创建第一个虚拟机
 
 ### 准备

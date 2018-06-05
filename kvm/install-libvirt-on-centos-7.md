@@ -123,7 +123,7 @@ genisoimage -jcharset utf-8 -output config.iso -volid cidata -joliet -rock user-
     <apic/>
     <pae/>
   </features>
-  <clock offset="localtime"/>
+  <clock offset="utc"/>
   <on_poweroff>destroy</on_poweroff>
   <on_reboot>restart</on_reboot>
   <on_crash>restart</on_crash>
@@ -175,6 +175,9 @@ genisoimage -jcharset utf-8 -output config.iso -volid cidata -joliet -rock user-
 - `<source file="/data/vos/centos/ooclab-dev.qcow2"/>` ：修改为对应的qcow2文件的地址
 - `<source file='/data/vos/centos/config.iso'/>` ：修改为对应iso文件的地址
 
+说明：
+
+- Linux 虚拟机，clock 使用 `utc`
 
 
 ### 创建虚拟机

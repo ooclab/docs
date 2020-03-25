@@ -35,7 +35,7 @@ sudo systemctl enable docker
 
 ```
 {
-  "registry-mirrors": ["https://registry.docker-cn.com"]
+  "registry-mirrors": ["请找一个靠谱的国内镜像地址"]
 }
 ```
 
@@ -52,5 +52,8 @@ sudo systemctl restart docker
 
 加速器：
 
-- [https://www.daocloud.io/mirror](https://www.daocloud.io/mirror) 比较靠谱
-- [Docker 中国官方镜像加速](https://www.docker-cn.com/registry-mirror) 很不靠谱
+- [https://www.daocloud.io/mirror](https://www.daocloud.io/mirror) 最近偶尔行
+
+最近使用这个方案加速比较正常：
+
+- [Quay Proxy Cache 帮助](http://mirror.azk8s.cn/help/quay-proxy-cache.html)
